@@ -135,6 +135,11 @@ li{{
     padding:0;
 }}
 
+p{{
+    margin:4px 0;
+    padding:0;
+}}
+
 </style>
 
 </head>
