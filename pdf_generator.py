@@ -3,30 +3,23 @@
 # Converts HTML Resume to PDF
 # ============================================
 
-from weasyprint import HTML
+from io import BytesIO
+from xhtml2pdf import pisa
 
 
 def generate_pdf(html_content):
     """
     Converts HTML content into PDF bytes.
-
-    Parameters
-    ----------
-    html_content : str
-        HTML generated from resume_template.py
-
-    Returns
-    -------
-    bytes
-        PDF file as bytes
     """
 
-    try:
+    pdf = BytesIO()
 
-        pdf = HTML(string=html_content).write_pdf()
+    result = pisa.CreatePDF(
+        src=html_content,
+        dest=pdf
+    )
 
-        return pdf
+    if result.err:
+        raise Exception("PDF generation failed.")
 
-    except Exception as e:
-
-        raise Exception(f"PDF Generation Failed: {str(e)}")
+    return pdf.getvalue()

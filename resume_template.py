@@ -231,7 +231,7 @@ Experience
             else:
                 end_date = f"{exp.get('end_month', '')} {exp.get('end_year', '')}".strip()
 
-    html += f"""
+            html += f"""
 <div class="item-title">
 {escape(exp.get("designation",""))}
 </div>
