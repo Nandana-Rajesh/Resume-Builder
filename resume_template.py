@@ -62,15 +62,14 @@ body{{
     font-family:Arial,Helvetica,sans-serif;
     background:#f3f3f3;
     margin:0;
-    padding:40px;
+    padding:0;
 }}
 
 .resume{{
     width:210mm;
-    min-height:297mm;
     margin:auto;
     background:white;
-    padding:40px;
+    padding:30px;
     box-sizing:border-box;
 }}
 
@@ -88,30 +87,37 @@ body{{
 }}
 
 .section{{
-    margin-top:25px;
+    margin-top:12px;
+    margin-bottom:8px;
 }}
 
 .section-title{{
-    font-size:18px;
+
+    font-size:16px;
     font-weight:bold;
-    border-bottom:2px solid black;
-    padding-bottom:5px;
-    margin-bottom:10px;
+    border-bottom:1px solid black;
+
+    margin:8px 0 6px 0;
+
+    padding-bottom:2px;
+
 }}
 
 .text{{
-    font-size:14px;
-    line-height:1.7;
-    text-align:justify;
+    font-size:13px;
+    line-height:1.2;
+    text-align:left;
+    margin:0;
 }}
 
 ul{{
-    margin:0;
-    padding-left:20px;
+    margin:4px 0;
+    padding-left:18px;
 }}
 
 li{{
-    margin-bottom:6px;
+    margin:2px 0;
+    padding:0;
 }}
 
 .item-title{{
@@ -122,6 +128,11 @@ li{{
 .item-subtitle{{
     color:#555;
     font-size:13px;
+}}
+
+*{{
+    margin:0;
+    padding:0;
 }}
 
 </style>
