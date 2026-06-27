@@ -1,0 +1,708 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* =========================
+   MAIN APP LAYOUT
+========================= */
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LEFT INPUT PANEL */
+.form-panel {
+    width: 40%;
+    background: #ffffff;
+    padding: 30px;
+    border-right: 1px solid #e5e7eb;
+    overflow-y: auto;
+}
+
+/* RIGHT PREVIEW PANEL */
+.preview-panel {
+    width: 60%;
+    padding: 30px;
+    background: #f9fafb;
+    overflow-y: auto;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1, h2, h3 {
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* =========================
+   FORM STYLING
+========================= */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
+    background: #fff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+/* =========================
+   CARD COMPONENT (for sections)
+========================= */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   SMALL UTILITIES
+========================= */
+.text-muted {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* =========================
+   RESUME PREVIEW CONTAINER
+========================= */
+
+.resume-container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 45px 50px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   RESUME HEADER
+========================= */
+
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid #111827;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.resume-name {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.resume-title {
+    font-size: 17px;
+    color: #4b5563;
+    margin-top: 5px;
+}
+
+.contact-info {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #374151;
+}
+
+
+/* =========================
+   RESUME SECTIONS
+========================= */
+
+.resume-section {
+    margin-bottom: 25px;
+}
+
+.resume-section-title {
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+
+    border-bottom: 1px solid #d1d5db;
+
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   SUMMARY SECTION
+========================= */
+
+.summary-text {
+
+    font-size: 14px;
+
+    text-align: justify;
+
+    color: #374151;
+
+}
+
+
+/* =========================
+   EXPERIENCE / EDUCATION ITEMS
+========================= */
+
+.resume-item {
+
+    margin-bottom: 18px;
+
+}
+
+
+.item-header {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+.item-title {
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+
+.item-subtitle {
+
+    font-size:14px;
+
+    color:#4b5563;
+
+}
+
+
+.item-date {
+
+    font-size:13px;
+
+    color:#6b7280;
+
+}
+
+
+.item-description {
+
+    margin-top:8px;
+
+    font-size:14px;
+
+    color:#374151;
+
+}
+
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills-container {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+}
+
+
+.skill-tag {
+
+    background:#f3f4f6;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    color:#374151;
+
+    border:1px solid #e5e7eb;
+
+}
+
+
+/* =========================
+   PROJECT SECTION
+========================= */
+
+.project-title {
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+
+.project-tech {
+
+    font-size:13px;
+
+    color:#2563eb;
+
+}
+
+
+.project-description {
+
+    margin-top:6px;
+
+    font-size:14px;
+
+}
+
+
+/* =========================
+   ACHIEVEMENTS / CERTIFICATIONS
+========================= */
+
+.list-style {
+
+    padding-left:20px;
+
+}
+
+
+.list-style li {
+
+    margin-bottom:6px;
+
+    font-size:14px;
+
+}
+
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+
+@media(max-width:900px){
+
+    .main-container{
+
+        flex-direction:column;
+
+    }
+
+
+    .form-panel,
+    .preview-panel{
+
+        width:100%;
+
+    }
+
+
+    .resume-container{
+
+        padding:30px;
+
+    }
+
+}
+/* =========================
+   AI GENERATION STATUS
+========================= */
+
+.ai-status {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 15px;
+
+    background:#eff6ff;
+
+    border-left:4px solid #3b82f6;
+
+    border-radius:6px;
+
+    font-size:14px;
+
+    color:#1e40af;
+
+    margin-bottom:15px;
+
+}
+
+
+/* =========================
+   LOADING SPINNER
+========================= */
+
+.loader {
+
+    width:18px;
+
+    height:18px;
+
+    border:3px solid #dbeafe;
+
+    border-top:3px solid #2563eb;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    from {
+
+        transform:rotate(0deg);
+
+    }
+
+    to {
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.success-message {
+
+    background:#ecfdf5;
+
+    color:#047857;
+
+    border-left:4px solid #10b981;
+
+    padding:12px 15px;
+
+    border-radius:6px;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-message {
+
+    background:#fef2f2;
+
+    color:#b91c1c;
+
+    border-left:4px solid #ef4444;
+
+    padding:12px 15px;
+
+    border-radius:6px;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* =========================
+   DOWNLOAD AREA
+========================= */
+
+.download-container {
+
+    margin-top:25px;
+
+    padding:20px;
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:10px;
+
+    border:1px solid #e5e7eb;
+
+}
+
+
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
+
+.download-btn {
+
+    background:#111827;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:0.25s ease;
+
+}
+
+
+.download-btn:hover {
+
+    background:#000000;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =========================
+   AI BUTTON EFFECT
+========================= */
+
+.generate-btn {
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.generate-btn::after {
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,0.2);
+
+    transition:0.4s;
+
+}
+
+
+.generate-btn:hover::after {
+
+    left:100%;
+
+}
+
+
+/* =========================
+   SMOOTH TRANSITIONS
+========================= */
+
+.card,
+.resume-container,
+button {
+
+    transition:
+
+    transform 0.2s ease,
+
+    box-shadow 0.2s ease;
+
+}
+
+
+.card:hover {
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#6b7280;
+
+}
+
+
+.empty-state h3 {
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+}
+
+
+.empty-state p {
+
+    font-size:14px;
+
+}
+
+
+/* =========================
+   SCROLLBAR DESIGN
+========================= */
+
+::-webkit-scrollbar {
+
+    width:8px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background:#f3f4f6;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:#cbd5e1;
+
+    border-radius:10px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:#94a3b8;
+
+}
